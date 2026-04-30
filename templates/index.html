@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Smart Attendance Portal</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="header">
+<h2>SMART ATTENDANCE MONITORING SYSTEM</h2>
+</div>
+
+<div class="navbar">
+<a href="/">Dashboard</a>
+<a href="/live">Live Attendance</a>
+<a href="/records">Attendance Records</a>
+<a href="/students">Students</a>
+</div>
+
+<div class="content">
+{% block content %}{% endblock %}
+</div>
+
+<div class="footer">
+Powered by MCA Project | AI Attendance Portal
+</div>
+
+</body>
+</html>

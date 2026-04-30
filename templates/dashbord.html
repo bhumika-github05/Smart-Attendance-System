@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="card dash-card">
+<h6>Total Students</h6>
+<h2>45</h2>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card dash-card">
+<h6>Present Today</h6>
+<h2>32</h2>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card dash-card">
+<h6>Accuracy Rate</h6>
+<h2>98%</h2>
+</div>
+</div>
+
+</div>
+
+<div class="card mt-4 p-4">
+<canvas id="chart"></canvas>
+</div>
+
+<script>
+new Chart(document.getElementById('chart'),{
+type:'bar',
+data:{
+labels:['Mon','Tue','Wed','Thu','Fri'],
+datasets:[{
+label:'Attendance',
+data:[12,19,14,17,22]
+}]
+}
+})
+</script>
+
+{% endblock %}
